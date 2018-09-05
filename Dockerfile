@@ -10,7 +10,8 @@ ADD entrypoint.sh /entrypoint.sh
 ADD config.json /v2ray/config.json
 ADD net_speeder /v2ray/net_speeder
 
+RUN chmod +x /v2ray/net_speeder
 RUN chmod +x /entrypoint.sh 
 ENTRYPOINT  /entrypoint.sh 
 
-EXPOSE 443
+EXPOSE 8888
