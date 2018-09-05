@@ -6,6 +6,15 @@ mv /v2ray/v2ray-v$VER-linux-64/v2ctl .
 mv /v2ray/v2ray-v$VER-linux-64/geoip.dat .
 mv /v2ray/v2ray-v$VER-linux-64/geosite.dat .
 
-chmod +x v2ray v2ctl
+chmod +x v2ray v2ctl net_speeder
 sed -i "s/your_uuid/$UUID/g" config.json
+
+ETH=$(eval "ifconfig | grep 'eth0'| wc -l")
+if [ "$ETH"  ==  '1' ] ; then
+	nohup /v2ray/net_speeder eth0 "ip" >/dev/null 2>&1 &
+fi
+if [ "$ETH"  ==  '0' ] ; then
+    nohup /v2ray/net_speeder venet0 "ip" >/dev/null 2>&1 &
+fi
+
 ./v2ray
