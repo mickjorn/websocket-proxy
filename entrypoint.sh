@@ -11,6 +11,7 @@ rm -f /v2ray.zip
 
 chmod +x v2ray v2ctl net_speeder
 sed -i "s/your_uuid/$UUID/g" config.json
+sed -i "s/8888/$PORT/g" config.json
 
 ETH=$(eval "ifconfig | grep 'eth0'| wc -l")
 if [ "$ETH"  ==  '1' ] ; then
