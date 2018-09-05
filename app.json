@@ -1,0 +1,22 @@
+{
+  "name": "freenet-v2ray",
+  "description": "deploy v2ray to Heroku.",
+  "keywords": ["freenet"],
+  "env": {
+     "VER": {
+       "description": "输入v2ray Core 版本号",
+       "value": "3.38"
+     },
+    "UUID": {
+       "description": "Vmess协议默认UUID，可输入自己的UUID",
+       "value": "bd756cc3-f044-4132-8e84-1d7a303a6458"
+     },
+    "V2RAY_RAY_BUFFER_SIZE": {
+       "description": "每个连接的缓存大小，单位MB,0表示缓存无上限",
+       "value": "10"
+     }
+  },
+  "website": "https://github.com/myproject/websocket-proxy",
+  "repository": "https://github.com/myproject/websocket-proxy",
+  "stack": "container"
+ }
