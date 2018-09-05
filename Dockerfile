@@ -11,4 +11,4 @@ ADD config.json /v2ray/config.json
 ADD net_speeder /v2ray/net_speeder
 
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT  /entrypoint.sh
+CMD /entrypoint.sh
