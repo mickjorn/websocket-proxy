@@ -1,5 +1,6 @@
 部署Docker镜像文件到OpenShift的学习示例。
 
+
 1.部署时配置 VER(v2ray core 的版本)、UUID(Vmess协议的UUID)。
 
 2.服务端使用docker-hub的Image部署,镜像为 [icegreen/websocket-proxy:v2ray-openshift](https://hub.docker.com/r/icegreen/websocket-proxy) 
