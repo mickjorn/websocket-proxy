@@ -8,6 +8,7 @@
 3.创建Route(secure route->ws->edge )并打开URL，显示 Bad Request，表示部署成功。
 
 ## 参考
+
  
 * https://docs.docker.com/docker-hub
 
